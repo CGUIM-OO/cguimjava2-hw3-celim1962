@@ -18,13 +18,26 @@ class Deck {
 		// Sample code end
 
 		for (int i = 0; i < nDeck; i++) {
-			for (int x = 1; x < 5; x++) {
+		for(int x=0;x<4;x++) {
 				for (int y = 1; y < 14; y++) {
-					Card card = new Card(x, y);
-					cards.add(card);
+					if(x==0) {
+						Card card = new Card(Card.Suit.Clubs, y);
+						cards.add(card);
+					}else if(x==1) {
+						Card card=new Card(Card.Suit.Diamonds,y);
+						cards.add(card);
+					}else if(x==2) {
+						Card card=new Card(Card.Suit.Hearts,y);
+						cards.add(card);
+					}else if(x==3) {
+						Card card=new Card(Card.Suit.Spades,y);
+						cards.add(card);
+					}
+					
+					
 
 				}
-			}
+		}
 		}
 
 	}
@@ -34,7 +47,7 @@ class Deck {
 	}
 
 	public Card getOneCard() {
-		Card n = new Card(0, 0);
+		Card n = new Card(null, 0);
 		Random nc = new Random();
 		if (nUsed == 52) {
 			shuffle();
@@ -60,8 +73,8 @@ class Deck {
 	public void shuffle() {
 		Random rnd = new Random();
 		int rp = rnd.nextInt(52);
-		Card rtemp = new Card(0, 0);
-		Card emp = new Card(0, 0);
+		Card rtemp = new Card(null, 0);
+		Card emp = new Card(null, 0);
 
 		for (int i = 0; i < 52; i++) {
 			while (i == rp) {
@@ -87,7 +100,7 @@ class Deck {
 			// Card n=cards.get(i);
 			// //System.out.println(n.getSuit()+","+n.getRank());
 			// n.printCard();
-			Card n = new Card(0, 0);
+			Card n = new Card(null, 0);
 			n = cards.get(i);
 			n.printCard();
 

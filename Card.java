@@ -6,15 +6,15 @@ class Card {
 		Clubs, Diamonds, Hearts, Spades
 	}
 
-	private int suit; // Definition: 1~4, Clubs=1, Diamonds=2, Hearts=3, Spades=4
+	Suit suit; // Definition: 1~4, Clubs=1, Diamonds=2, Hearts=3, Spades=4
 	private int rank; // 1~13
 
 	/**
 	 * @param s suit
 	 * @param r rank
 	 */
-	public Card(int s, int r) {
-		suit = s;
+	public Card(Suit s, int r) {
+		suit=s;
 		rank = r;
 	}
 
@@ -32,21 +32,8 @@ class Card {
 
 	public Suit getSuit() {
 	
-		Card.Suit ss1=Suit.Clubs;
-		Card.Suit ss2=Suit.Diamonds;
-		Card.Suit ss3=Suit.Hearts;
-		Card.Suit ss4=Suit.Spades;
-		if(suit==1) {
-				return ss1;
-		}
-		else if(suit==2) {
-			return ss2;
-		}else if(suit==3) {
-			return ss3;
-		}else if(suit==4) {
-			return ss4;
-		}
-		return ss4;
+		
+		return suit;
 	}
 
 	public int getRank() {
