@@ -64,7 +64,7 @@ class Deck {
 		 */
 		usedCard.add(c1, n);
 		nUsed++;
-		c1++;
+		c1=c1+1;
 
 		return n;
 	}

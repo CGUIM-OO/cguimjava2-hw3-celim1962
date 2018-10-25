@@ -24,10 +24,12 @@ class Card {
 		// Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as
 		// Clubs Ace
 		
-		
+		if(rank==1) {
+			System.out.println(getSuit()+","+"Ace");
+		}else {
 		 
 		System.out.println(getSuit() + "," + getRank());
-
+		}
 	}
 
 	public Suit getSuit() {
@@ -37,6 +39,9 @@ class Card {
 	}
 
 	public int getRank() {
+		
+		
 		return rank;
 	}
+	
 }
